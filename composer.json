@@ -1,0 +1,38 @@
+{
+    "name": "tapago/sdk",
+    "description": "SDK oficial da TaPago API - Validação de comprovativos de pagamento em Angola",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "TaPago",
+            "homepage": "https://tapago.app"
+        }
+    ],
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "guzzlehttp/psr7": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0",
+        "phpstan/phpstan": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "TaPago\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "TaPago\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "analyse": "phpstan analyse --level max src/",
+        "lint": "php -l src/"
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
