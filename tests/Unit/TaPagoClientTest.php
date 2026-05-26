@@ -25,7 +25,7 @@ class TaPagoClientTest extends TestCase
         $handlerStack = HandlerStack::create($mock);
         $guzzle = new GuzzleClient(['handler' => $handlerStack, 'http_errors' => false]);
 
-        return new TaPagoClient('https://tapago.app/api', 'test-token', $guzzle);
+        return new TaPagoClient('test-token', 'https://tapago.app/api', $guzzle);
     }
 
     private function jsonResponse(int $status, array $data): Response

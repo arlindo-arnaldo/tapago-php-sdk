@@ -5,10 +5,7 @@ require_once __DIR__ . '/../vendor/autoload.php';
 use TaPago\Exceptions\TaPagoException;
 use TaPago\TaPagoClient;
 
-$client = new TaPagoClient(
-    'https://tapago.app/api',
-    'seu-token-aqui'
-);
+$client = new TaPagoClient('seu-token-aqui');
 
 try {
     // Listar todas as sessões

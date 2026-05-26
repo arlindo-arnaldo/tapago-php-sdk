@@ -9,10 +9,7 @@ use TaPago\Exceptions\TaPagoException;
 use TaPago\Exceptions\ValidationFailedException;
 use TaPago\TaPagoClient;
 
-$client = new TaPagoClient(
-    'https://tapago.app/api',
-    'seu-token-aqui'
-);
+$client = new TaPagoClient('seu-token-aqui');
 
 $sessionId = 'uuid-da-sessao';
 $receiptPath = '/caminho/para/comprovativo.pdf';

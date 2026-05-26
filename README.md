@@ -20,9 +20,15 @@ Obtenha o seu token de API na página de configurações da sua conta TaPago.
 ```php
 use TaPago\TaPagoClient;
 
+$client = new TaPagoClient('seu-token-aqui');
+```
+
+Se precisar de apontar para um URL diferente (ex: ambiente de desenvolvimento):
+
+```php
 $client = new TaPagoClient(
-    baseUrl: 'https://tapago.app/api',
-    apiToken: 'seu-token-aqui'
+    'seu-token-aqui',
+    'http://localhost:8000/api'
 );
 ```
 

@@ -25,9 +25,11 @@ class TaPagoClient
     private int $timeout;
     private GuzzleClient $httpClient;
 
+    public const DEFAULT_BASE_URL = 'https://tapago.app/api';
+
     public function __construct(
-        string $baseUrl,
         string $apiToken,
+        string $baseUrl = self::DEFAULT_BASE_URL,
         ?GuzzleClient $httpClient = null,
         int $timeout = 30
     ) {
