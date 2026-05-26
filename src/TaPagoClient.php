@@ -25,7 +25,7 @@ class TaPagoClient
     private int $timeout;
     private GuzzleClient $httpClient;
 
-    public const DEFAULT_BASE_URL = 'https://tapago.app/api';
+    public const DEFAULT_BASE_URL = 'http://tapago.ngomamusic.net/api';
 
     public function __construct(
         string $apiToken,
